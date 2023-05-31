@@ -1,0 +1,10 @@
+x <- c(79.98, 80.04, 80.02, 80.04, 80.03, 80.03, 80.04, 79.97, 80.05,
+       80.03, 80.02, 80.00,80.02)
+y <- c(80.02, 79.94, 79.98, 79.97, 79.97, 80.03, 79.95, 79.97)      
+mean(x)
+mean(y)
+sd(x)
+sd(y)
+t.test(x, y,var.equal = TRUE)
+plot(ecdf(x),do.points=FALSE,verticals=TRUE,xlim=range(x,y))
+plot(ecdf(y),do.points=FALSE,verticals=TRUE,add=TRUE)

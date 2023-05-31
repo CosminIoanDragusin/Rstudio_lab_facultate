@@ -1,0 +1,17 @@
+microprocesoare <- c(105, 232, 290, 293, 295, 325, 368, 388, 403, 405, 422, 428)
+hist(microprocesoare, breaks = 20)
+hist(microprocesoare,freq = FALSE)
+lines(density(microprocesoare))
+mean(microprocesoare)
+sd(microprocesoare)
+t.test(microprocesoare,mu=550)
+summary(microprocesoare)
+w=hist(microprocesoare)
+y = rnorm(10,mean=329.5,sd=94.52032)
+summary(y)
+sd(y)
+windows()
+qqplot(microprocesoare,y,main="QQplot pentru doua selectii",pch="+",
+       xlab="microprocesoare=runif(100",ylab="y=rnorm(100,mean=329.5")
+z=ks.test(microprocesoare,y)
+z
